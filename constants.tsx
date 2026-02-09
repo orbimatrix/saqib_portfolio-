@@ -59,7 +59,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Automated tool for visualizing and optimizing transformer layers for edge devices.',
       tags: ['PyTorch', 'ONNX', 'Python'],
       link: '#',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Speedup', value: '45%' }, { label: 'Params', value: '1.2M' }]
     },
     {
@@ -68,7 +68,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Multi-modal reasoning agent for real-time industrial defect detection.',
       tags: ['LLM', 'CV', 'LangChain'],
       link: '#',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600'
+      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
     }
   ],
   [Domain.HUGGING_FACE]: [
@@ -78,7 +78,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Efficient Deep Fake Detection using EfficientNet-Swin Transformer Hybrid Architecture. Combines EfficientNet-B3 and Swin Transformer for robust detection.',
       tags: ['EfficientNet', 'Swin Transformer', 'Hybrid Architecture'],
       link: 'https://huggingface.co/Saqib772/EffiSwinT',
-      image: 'https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Backbone', value: 'B3' }, { label: 'Type', value: 'Hybrid' }]
     },
     {
@@ -87,7 +87,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Ensemble-Based Deep Learning Architecture for Deepfake Detection. System achieves 94.87% accuracy by leveraging three complementary architectures.',
       tags: ['CNN', 'Vision Transformers', 'Ensemble'],
       link: 'https://huggingface.co/Saqib772/CNN_VIT_DeepFake',
-      image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Accuracy', value: '94.87%' }, { label: 'Models', value: 'Ensemble' }]
     },
     {
@@ -96,7 +96,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Comprehensive dataset hosted on Hugging Face for fashion image analysis, classification, and generative modeling research.',
       tags: ['Dataset', 'Computer Vision', 'Fashion'],
       link: 'https://huggingface.co/datasets/Saqib772/fashion',
-      image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Format', value: 'Parquet' }, { label: 'Task', value: 'Classification' }]
     },
     {
@@ -105,7 +105,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Interactive application for detecting potential exoplanets from planetary data using advanced machine learning algorithms.',
       tags: ['Space', 'Astronomy', 'Gradio'],
       link: 'https://huggingface.co/spaces/Saqib772/Exoplanet_detection',
-      image: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Domain', value: 'Astro-ML' }, { label: 'UI', value: 'Gradio' }]
     },
     {
@@ -114,7 +114,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Deep learning demo for classifying celestial objects and galactic phenomena with high precision.',
       tags: ['Computer Vision', 'Astronomy', 'PyTorch'],
       link: 'https://huggingface.co/spaces/Saqib772/Astronomy_image_classfication',
-      image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Modality', value: 'Vision' }, { label: 'Framework', value: 'HF Hub' }]
     },
     {
@@ -123,7 +123,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Multi-agent system powered by CrewAI for automated technical blog generation and content orchestration.',
       tags: ['Multi-Agent', 'LLMs', 'CrewAI'],
       link: 'https://huggingface.co/spaces/Saqib772/Blogs_Agent',
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Agents', value: 'Autonomous' }, { label: 'Use-case', value: 'NLP' }]
     },
     {
@@ -132,27 +132,91 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'Real-time interactive dashboard for testing facial images against state-of-the-art deepfake detection models.',
       tags: ['Security', 'Deep Learning', 'Deepfake'],
       link: 'https://huggingface.co/spaces/Saqib772/deepfake',
-      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Safety', value: 'Critical' }, { label: 'Model', value: 'EffiSwinT' }]
     }
   ],
   [Domain.DATA_SCIENCE]: [
     {
-      id: 'ds-1',
-      title: 'Climate Impact Analysis',
-      description: 'Comprehensive study on urban heat islands using satellite imagery and IoT sensors.',
-      tags: ['R', 'Tableau', 'Scikit-learn'],
-      link: '#',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600',
-      stats: [{ label: 'P-Value', value: '0.001' }, { label: 'Dataset', value: '4TB' }]
+      id: 'ds-real-estate',
+      title: 'Real Estate Price Predictor',
+      description: 'An End-to-End machine learning project to predict median home values using exploratory data analysis and regression modeling.',
+      tags: ['Kaggle', 'ML', 'Regression', 'EDA'],
+      link: 'https://www.kaggle.com/code/saqibiqbal2/real-estate-price-predictor',
+      image: 'https://images.unsplash.com/photo-1582408921715-18e7806365c1?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Platform', value: 'Kaggle' }, { label: 'Model', value: 'Regressor' }]
     },
     {
-      id: 'ds-2',
-      title: 'Predictive Churn Modeling',
-      description: 'Advanced ensemble techniques for predicting customer churn in SaaS ecosystems.',
-      tags: ['XGBoost', 'EDA', 'Pandas'],
-      link: '#',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600'
+      id: 'ds-cultural-heritage',
+      title: 'Cultural Heritage Recommender',
+      description: 'A specialized recommender system designed to curate and suggest cultural heritage experiences based on user profiles.',
+      tags: ['Kaggle', 'RecSys', 'Analytics'],
+      link: 'https://www.kaggle.com/writeups/saqibiqbal2/a-simple-recommender-system-for-cultural-heritage',
+      image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Type', value: 'Writeup' }, { label: 'Field', value: 'Heritage' }]
+    },
+    {
+      id: 'ds-mayan',
+      title: 'Mayan Inscriptions Analysis',
+      description: 'Quantitative study and data exploration of Mayan glyphs and historical inscriptions.',
+      tags: ['Kaggle', 'Analysis', 'History'],
+      link: 'https://www.kaggle.com/code/saqibiqbal2/mayan-inscriptions',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Domain', value: 'Archaeology' }, { label: 'Method', value: 'NLP/Stats' }]
+    },
+    {
+      id: 'ds-ember',
+      title: 'Ember Multiclass Classification',
+      description: 'Multi-class classification pipeline on the Ember dataset for advanced feature prioritization.',
+      tags: ['Kaggle', 'Classification', 'ML'],
+      link: 'https://www.kaggle.com/code/saqibiqbal2/ember-with-multiclass-classification',
+      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Dataset', value: 'Ember' }, { label: 'Classes', value: 'Multi' }]
+    },
+    {
+      id: 'ds-astronomy-kaggle',
+      title: 'Astronomy Image Classification (Kaggle)',
+      description: 'Kaggle implementation of astronomical object classification using deep convolutional neural networks.',
+      tags: ['Kaggle', 'Computer Vision', 'Astronomy'],
+      link: 'https://www.kaggle.com/code/saqibiqbal2/astronomy-image-classification',
+      image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Framework', value: 'PyTorch' }, { label: 'Data', value: 'Stars/Galaxies' }]
+    },
+    {
+      id: 'ds-effiswint-kaggle',
+      title: 'EffiSwinT Deepfake Detection (Kaggle)',
+      description: 'Full training and evaluation pipeline for the EffiSwinT architecture on Kaggle environment.',
+      tags: ['Kaggle', 'Deep Learning', 'Deepfake'],
+      link: 'https://www.kaggle.com/code/saqibiqbal2/effiswint-deepfake-detection',
+      image: 'https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Model', value: 'Hybrid' }, { label: 'Efficiency', value: 'High' }]
+    },
+    {
+      id: 'ds-diabetic',
+      title: 'Diabetic Retinopathy ViT',
+      description: 'Using Vision Transformers (ViT) to identify diabetic retinopathy in retinal scans with high sensitivity.',
+      tags: ['Kaggle', 'ViT', 'Medical AI'],
+      link: 'https://www.kaggle.com/code/saqibiqbal2/diabetic-retinopathy-vision-transformer-vit',
+      image: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Domain', value: 'Healthcare' }, { label: 'Architecture', value: 'ViT' }]
+    },
+    {
+      id: 'ds-disease',
+      title: 'Disease Prediction Engine',
+      description: 'A predictive modeling project aimed at diagnosing various health conditions from patient symptoms data.',
+      tags: ['Kaggle', 'Predictive', 'Healthcare'],
+      link: 'https://www.kaggle.com/code/saqibiqbal2/disease-prediction',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Target', value: 'Diagnosis' }, { label: 'Accuracy', value: '95%+' }]
+    },
+    {
+      id: 'ds-cars',
+      title: 'Cars Collection DS 2025',
+      description: 'A machine learning and data analysis project for exploring, processing, and modeling the Cars Dataset 2025.',
+      tags: ['GitHub', 'EDA', 'Modeling'],
+      link: 'https://github.com/orbimatrix/Cars-Collection-DS',
+      image: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Year', value: '2025' }, { label: 'Repo', value: 'GitHub' }]
     }
   ],
   [Domain.WEB3]: [
@@ -162,7 +226,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'A high-performance aggregator for multi-chain liquidity providing optimal swap rates.',
       tags: ['Solidity', 'Ethers.js', 'React'],
       link: '#',
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'TVL', value: '$4.2M' }, { label: 'Chains', value: '5' }]
     },
     {
@@ -171,7 +235,7 @@ export const PROJECTS: Record<Domain, Project[]> = {
       description: 'On-chain voting system for community-owned digital asset management.',
       tags: ['Hardhat', 'IPFS', 'TheGraph'],
       link: '#',
-      image: 'https://images.unsplash.com/photo-1642104704074-907c0698cbd9?auto=format&fit=crop&q=80&w=600',
+      image: 'https://images.unsplash.com/photo-1642104704074-907c0698cbd9?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Proposals', value: '120+' }, { label: 'Users', value: '15k' }]
     }
   ]
