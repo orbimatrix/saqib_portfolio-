@@ -4,7 +4,8 @@ export enum Domain {
   AI = 'AI',
   HUGGING_FACE = 'HUGGING_FACE',
   DATA_SCIENCE = 'DATA_SCIENCE',
-  WEB3 = 'WEB3'
+  WEB3 = 'WEB3',
+  ALL_PROJECTS = 'ALL_PROJECTS'
 }
 
 export interface Project {
