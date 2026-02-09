@@ -63,13 +63,17 @@ const App: React.FC = () => {
       title: "Web3 & Decentralized Tech",
       description: "Developing secure smart contracts and decentralized applications that empower users."
     },
+    [Domain.VIDEO_EDITOR]: {
+      title: "Professional Video Production",
+      description: "Crafting visual stories for leading YouTube channels. Expert in cinematic editing, post-production, and audience retention."
+    },
     [Domain.ALL_PROJECTS]: {
       title: "The Project Vault",
       description: "A comprehensive showcase of 20+ projects across Web3, Generative AI, Gaming, and Research."
     }
   };
 
-  const domainTabs = [Domain.AI, Domain.HUGGING_FACE, Domain.DATA_SCIENCE, Domain.WEB3];
+  const domainTabs = [Domain.AI, Domain.HUGGING_FACE, Domain.DATA_SCIENCE, Domain.WEB3, Domain.VIDEO_EDITOR];
 
   return (
     <div className={`min-h-screen transition-all duration-700 ${theme.bg} ${theme.text} relative`}>
@@ -200,6 +204,7 @@ const App: React.FC = () => {
                 activeDomain === Domain.HUGGING_FACE ? "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" :
                 activeDomain === Domain.DATA_SCIENCE ? "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200" :
                 activeDomain === Domain.WEB3 ? "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1200" :
+                activeDomain === Domain.VIDEO_EDITOR ? "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=1200" :
                 "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=1200"
               } 
               alt="Context Visual"
@@ -267,8 +272,8 @@ const App: React.FC = () => {
         {/* DOMAIN PAGES & ALL PROJECTS GALLERY */}
         {activeDomain !== Domain.HOME && (
           <>
-            {/* Tag Filters - Hidden for Domain.ALL_PROJECTS to avoid clutter */}
-            {availableTags.length > 0 && activeDomain !== Domain.ALL_PROJECTS && (
+            {/* Tag Filters - Hidden for Domain.ALL_PROJECTS and Domain.VIDEO_EDITOR to avoid clutter */}
+            {availableTags.length > 0 && activeDomain !== Domain.ALL_PROJECTS && activeDomain !== Domain.VIDEO_EDITOR && (
               <div className="flex flex-wrap gap-2 mb-8 justify-center">
                 <button 
                   onClick={() => setSelectedTag(null)}
@@ -290,8 +295,8 @@ const App: React.FC = () => {
 
             <section id="projects" className="scroll-mt-32">
               <SectionHeader 
-                title={activeDomain === Domain.ALL_PROJECTS ? "Production Showcase" : "Vertical Impact"} 
-                subtitle={activeDomain === Domain.ALL_PROJECTS ? "A deep dive into 20+ production-grade projects." : "Case studies and deployments in this domain."}
+                title={activeDomain === Domain.ALL_PROJECTS ? "Production Showcase" : (activeDomain === Domain.VIDEO_EDITOR ? "YouTube Portfolio" : "Vertical Impact")} 
+                subtitle={activeDomain === Domain.ALL_PROJECTS ? "A deep dive into 20+ production-grade projects." : (activeDomain === Domain.VIDEO_EDITOR ? "Direct portfolio of channels I edit and upload for." : "Case studies and deployments in this domain.")}
                 theme={theme}
               />
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

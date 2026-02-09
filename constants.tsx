@@ -48,6 +48,15 @@ export const THEMES: Record<Domain, DomainTheme> = {
     cardBg: 'bg-slate-900/50',
     icon: 'text-fuchsia-400'
   },
+  [Domain.VIDEO_EDITOR]: {
+    primary: 'from-rose-600 to-indigo-900',
+    secondary: 'bg-rose-50',
+    accent: 'text-rose-600',
+    bg: 'bg-slate-950',
+    text: 'text-slate-100',
+    cardBg: 'bg-slate-900/40',
+    icon: 'text-rose-400'
+  },
   [Domain.ALL_PROJECTS]: {
     primary: 'from-slate-800 to-black',
     secondary: 'bg-slate-800',
@@ -58,170 +67,6 @@ export const THEMES: Record<Domain, DomainTheme> = {
     icon: 'text-slate-400'
   }
 };
-
-// Raw list for the "Project Vault" gallery
-const ALL_RAW_PROJECTS = [
-    {
-      title: "Web3 Trivia",
-      description: "Web3 Trivia Game fuses the thrill of trivia with blockchain — players test their sports knowledge, earn crypto/NFTs, and chat live in a fully on-chain experience.",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800",
-      tech: ["Solidity", "NextJs", "Thirdweb", "Hardhat"],
-      features: ["NFT's", "Trivia", "Token"],
-      link:"https://www.web3trivia.com/"
-    },
-    {
-      title: "Card Rush",
-      description: "Transform your gaming skills into real value with Card Rush, a skill-based card game platform where strategy meets rewards.",
-      image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&q=80&w=800",
-      tech: ["TypeScript", "Next.js", "Thirdweb", "Solidity"],
-      features: ["Multi-sig", "NFT's", "Tokens"],
-      link:"https://cardrush.vercel.app/"
-    },
-    {
-      title: "Deauth",
-      description: "The first fully decentralized social media app powered by Somnia chain and cutting-edge AI technology.",
-      image: "https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?auto=format&fit=crop&q=80&w=800",
-      tech: ["Solidity", "IPFS", "React", "Somnia"],
-      features: ["Zero Gas fees", "Royalties", "Tokens"],
-      link:"https://deauth-theta.vercel.app/"
-    },
-    {
-      title: "DAO",
-      description: "Socialfy DAO is a decentralized autonomous organization platform that empowers communities to fund and govern social impact projects.",
-      image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800",
-      tech: ["Solidity", "IPFS", "Next", "Camp"],
-      features: ["Zero Gas fees", "Royalties", "Tokens"],
-      link:"https://dao-nu.vercel.app/"
-    },
-    {
-      title: "legacy of game",
-      description: "Web3 Games on Polygon and Ton Blockchain. A collection of decentralized mini-games.",
-      image: "https://images.unsplash.com/photo-1614285457768-646f65ca8548?auto=format&fit=crop&q=80&w=800",
-      tech: ["Solidity", "Ton", "Next", "Web3"],
-      features: ["Zero Gas fees", "Royalties", "Tokens"],
-      link:"https://www.legacyofgame.io/"
-    },
-    {
-      title: "USDT Locking",
-      description: "A modern web application for managing token locking and claiming on the blockchain. Built with Next.js and thirdweb.",
-      image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800",
-      tech: ["Solidity", "Next", "Camp"],
-      features: ["USDT", "Royalties", "Tokens"],
-      link:"https://usdtlocking.vercel.app/"
-    },
-    {
-      title: "Poem Vision",
-      description: "PoemVision is a Next.js application that transforms images into beautiful poems using AI.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gen-AI", "Next", "Supabase"],
-      features: ["Poems", "Imgs", "UI/UX"],
-      link:"https://poemvision.vercel.app/"
-    },
-    {
-      title: "Space Shooter",
-      description: "A fast-paced arcade space shooter built with p5.js. Pilot your ship through treacherous asteroid fields.",
-      image: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&q=80&w=800",
-      tech: ["p5.js", "Next", "GenAi"],
-      features: ["Gaming", "Casual", "levels"],
-      link:"https://asteroid-tau.vercel.app/"
-    },
-    {
-      title: "NFT Marketplace",
-      description: "The premier marketplace for Web3 gaming assets. Trade, collect, and dominate the metaverse.",
-      image: "https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?auto=format&fit=crop&q=80&w=800",
-      tech: ["Solidity", "Next", "Thirdweb"],
-      features: ["NFT's", "Royalties", "Tokens"],
-      link:"https://market.orbimatrix.com/"
-    },
-    {
-      title: "Farmer Tycoon",
-      description: "Stake your tokens, earn rewards, and explore opportunities in the universe with blockchain farming.",
-      image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=800",
-      tech: ["Solidity", "Next", "EVM"],
-      features: ["Stake", "NFT", "Tokens"],
-      link:"https://farmertycoon.vercel.app/"
-    },
-    {
-      title: "Summarizer",
-      description: "Simplify your reading with Summize, an open-source article summarizer that transforms articles into clear summaries.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gen-AI", "React", "GPT-4"],
-      features: ["Links", "SEO", "Summary"],
-      link:"https://ai-summary-lovat.vercel.app/"
-    },
-    {
-      title: "AI Stickers",
-      description: "A web application that generates custom stickers using Google's Gemini AI. (Imagen AI)",
-      image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "imagen"],
-      features: ["Stickers", "Images"],
-      link:"https://stickers-black.vercel.app/"
-    }, 
-    {
-      title: "Pixel Art Genie",
-      description: "Transform your creative ideas into stunning pixel art effortlessly with the power of AI!",
-      image: "https://images.unsplash.com/photo-1550741111-c3bb36a4392b?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "imagen"],
-      features: ["Pixel", "Art", "Tokens"],
-      link:"https://pixels-rho.vercel.app/"
-    },
-    {
-      title: "HireIQ",
-      description: "An intelligent resume analysis tool powered by Google's Gemini AI that helps evaluate and improve resumes.",
-      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "imagen"],
-      features: ["Resume", "Insights", "Jobs"],
-      link:"https://ai-resume-checker-gamma.vercel.app/"
-    },
-    {
-      title: "NeuroManga",
-      description: "An AI-powered comic and manga creation platform. Create stunning panels with Gemini AI.",
-      image: "https://images.unsplash.com/photo-1613376023733-0d743de209ec?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "imagen"],
-      features: ["Manga", "Anime", "Art"],
-      link:"https://neuromanga.vercel.app/"
-    },
-    {
-      title: "Promptfly",
-      description: "PromptFly is an intelligent web application designed to help users craft and optimize AI prompts for Gemini.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "imagen"],
-      features: ["Precision", "Specific", "AI Score"],
-      link:"https://promptfly.vercel.app/"
-    },
-    {
-      title: "Revamp Pro",
-      description: "Resume Revamp Pro transforms resumes and enhances career prospects with advanced AI insights.",
-      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "imagen"],
-      features: ["AI-Powered Rewrites", "Tailoring", "Job Search"],
-      link:"https://revamp-pro.vercel.app/"
-    },
-    {
-      title: "Viral GPT",
-      description: "AI-powered application that generates engaging social media content for Twitter, TikTok, and Instagram.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "imagen"],
-      features: ["Prompt Rewrite", "Linkedin", "Content"],
-      link:"https://viralgpt.vercel.app/"
-    },
-    {
-      title: "Rust Stream",
-      description: "A powerful AI-powered tool for generating Solana smart contract code and tests using Gemini AI.",
-      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "AI"],
-      features: ["Code", "Rust", "Anchor"],
-      link:"https://rust-ai.vercel.app/"
-    },
-    {
-      title: "SoliForge",
-      description: "A powerful AI-powered platform for generating, optimizing, and testing Solidity smart contracts.",
-      image: "https://images.unsplash.com/photo-1621504450181-5d356f63d3ee?auto=format&fit=crop&q=80&w=800",
-      tech: ["Gemini", "Vue", "AI"],
-      features: ["Code", "Solidity", "EVM"],
-      link:"https://solidityforge.vercel.app/"
-    }
-];
 
 export const PROJECTS: Record<Domain, Project[]> = {
   [Domain.HOME]: [],
@@ -443,15 +288,51 @@ export const PROJECTS: Record<Domain, Project[]> = {
       image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800'
     }
   ],
-  [Domain.ALL_PROJECTS]: ALL_RAW_PROJECTS.map((p, i) => ({
-    id: `all-${i}`,
-    title: p.title,
-    description: p.description,
-    image: p.image,
-    link: p.link,
-    tags: [...p.tech, ...p.features]
-  }))
+  [Domain.VIDEO_EDITOR]: [
+    {
+      id: 'video-ak-gaming',
+      title: 'AK Gaming',
+      description: 'High-energy gaming content, walkthroughs, and highlight reels. Expertly edited for pacing and maximum engagement.',
+      tags: ['YouTube', 'Gaming', 'Editing'],
+      link: 'https://www.youtube.com/@Akgaming-games',
+      image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Genre', value: 'Gaming' }, { label: 'Role', value: 'Video Editor' }]
+    },
+    {
+      id: 'video-one-minute-rumor',
+      title: 'One Minute Rumor',
+      description: 'Fast-paced story-driven content. Specializing in rapid storytelling, visual hooks, and concise narration for short-form retention.',
+      tags: ['Storytelling', 'YouTube', 'Short-form'],
+      link: 'https://www.youtube.com/@OneMinuteRumor',
+      image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Genre', value: 'Storytelling' }, { label: 'Style', value: 'High Retention' }]
+    },
+    {
+      id: 'video-towards-better',
+      title: 'Towards Better Understanding',
+      description: 'Educational and knowledge-based content. Clear visual explanations, motion graphics, and structured information delivery.',
+      tags: ['Educational', 'Documentary', 'Knowledge'],
+      link: 'https://www.youtube.com/@TowardsBetterUnderstanding',
+      image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Genre', value: 'Knowledge' }, { label: 'Impact', value: 'Educational' }]
+    },
+    {
+      id: 'video-yt-orbimatrix',
+      title: 'YouTube: OrbiMatrix Channel',
+      description: 'Primary creative outlet for tech-focused video production, editing and storytelling.',
+      tags: ['YouTube', 'Production', 'Tech'],
+      link: 'https://www.youtube.com/@orbimatrix',
+      image: 'https://images.unsplash.com/photo-1536240478700-b86d24627a7b?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Platform', value: 'YouTube' }, { label: 'Role', value: 'Lead Editor' }]
+    }
+  ],
+  [Domain.ALL_PROJECTS]: [] // Will be populated dynamically below
 };
+
+// Dynamic mapping from individual domain project lists for a comprehensive vault
+PROJECTS[Domain.ALL_PROJECTS] = Object.values(Domain)
+  .filter(d => d !== Domain.ALL_PROJECTS && d !== Domain.HOME)
+  .flatMap(d => (PROJECTS[d as Domain] || []));
 
 export const SKILLS: Record<Domain, Skill[]> = {
   [Domain.HOME]: [
@@ -476,6 +357,12 @@ export const SKILLS: Record<Domain, Skill[]> = {
   [Domain.WEB3]: [
     { name: 'Solidity Smart Contracts', level: 92 },
     { name: 'EVM Architecture', level: 85 }
+  ],
+  [Domain.VIDEO_EDITOR]: [
+    { name: 'Adobe Premiere Pro', level: 98 },
+    { name: 'Adobe After Effects', level: 95 },
+    { name: 'DaVinci Resolve', level: 92 },
+    { name: 'YouTube Content Strategy', level: 90 }
   ],
   [Domain.ALL_PROJECTS]: [
     { name: 'Multi-stack Engineering', level: 98 },
