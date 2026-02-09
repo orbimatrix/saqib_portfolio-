@@ -221,22 +221,76 @@ export const PROJECTS: Record<Domain, Project[]> = {
   ],
   [Domain.WEB3]: [
     {
-      id: 'web3-1',
-      title: 'DEX Liquidity Aggregator',
-      description: 'A high-performance aggregator for multi-chain liquidity providing optimal swap rates.',
-      tags: ['Solidity', 'Ethers.js', 'React'],
-      link: '#',
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800',
-      stats: [{ label: 'TVL', value: '$4.2M' }, { label: 'Chains', value: '5' }]
+      id: 'web3-trivia',
+      title: 'Web3 Trivia',
+      description: 'A one-stop hub bringing together people of all ages eager to explore the future of gaming and earning via online crypto games.',
+      tags: ['Web3', 'Gaming', 'Crypto'],
+      link: 'https://web3trivia.com',
+      image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Platform', value: 'web3trivia.com' }, { label: 'Users', value: 'Global' }]
     },
     {
-      id: 'web3-2',
-      title: 'NFT Governance Protocol',
-      description: 'On-chain voting system for community-owned digital asset management.',
-      tags: ['Hardhat', 'IPFS', 'TheGraph'],
-      link: '#',
-      image: 'https://images.unsplash.com/photo-1642104704074-907c0698cbd9?auto=format&fit=crop&q=80&w=800',
-      stats: [{ label: 'Proposals', value: '120+' }, { label: 'Users', value: '15k' }]
+      id: 'web3-farmer',
+      title: 'Farmer Tycoon',
+      description: 'A revolutionary blockchain-based farming game that combines traditional farming mechanics with cutting-edge NFT technology and blockchain integration.',
+      tags: ['Blockchain', 'NFT', 'P2E'],
+      link: 'https://github.com/orbimatrix/farmertycoon',
+      image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Technology', value: 'NFT/Chain' }, { label: 'Status', value: 'Open Source' }]
+    },
+    {
+      id: 'web3-genesis',
+      title: 'Genesis NFT TCG',
+      description: 'Callers of the Current is a cutting-edge NFT trading card game built on Solana. Features a unique booster system powered by Chainlink VRF.',
+      tags: ['Solana', 'Chainlink VRF', 'TCG'],
+      link: 'https://github.com/orbimatrix/SolanaNFT',
+      image: 'https://images.unsplash.com/photo-1635322966219-b75ed372eb3c?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Network', value: 'Solana' }, { label: 'Oracle', value: 'Chainlink' }]
+    },
+    {
+      id: 'web3-deauth',
+      title: 'DeAuth - Decentralized Social',
+      description: 'Groundbreaking social platform designed to revolutionize interactions with deep fake integration, chatbot assistance, and privacy priority.',
+      tags: ['Decentralized', 'Social Media', 'AI'],
+      link: 'https://gitlab.com/saqib99/social-dapp',
+      image: 'https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Type', value: 'Social dApp' }, { label: 'Security', value: 'Privacy-First' }]
+    },
+    {
+      id: 'web3-solana-gen',
+      title: 'Solana Code Generator',
+      description: 'A powerful AI-powered tool for generating Solana smart contract code and tests using Google\'s Gemini AI.',
+      tags: ['Solana', 'AI', 'Rust', 'GenAI'],
+      link: 'https://gitlab.com/saqib99/rust_ai',
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Core', value: 'Gemini AI' }, { label: 'Language', value: 'Rust' }]
+    },
+    {
+      id: 'web3-solidity-forge',
+      title: 'SolidityForge AI',
+      description: 'A powerful AI-powered platform for generating, optimizing, and testing Solidity smart contracts with ease.',
+      tags: ['Solidity', 'AI', 'Smart Contracts'],
+      link: 'https://gitlab.com/saqib99/solidityforge',
+      image: 'https://images.unsplash.com/photo-1621504450181-5d356f63d3ee?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Platform', value: 'Forge AI' }, { label: 'EVM', value: 'Solidity' }]
+    },
+    {
+      id: 'web3-socialfy',
+      title: 'Socialfy DAO',
+      description: 'Decentralized autonomous organization platform that empowers communities to fund and govern social impact projects through blockchain.',
+      tags: ['DAO', 'Governance', 'Impact'],
+      link: 'https://gitlab.com/saqib99/dao',
+      image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Concept', value: 'DAO' }, { label: 'Mission', value: 'Governance' }]
+    },
+    {
+      id: 'web3-token-lock',
+      title: 'Token Lock App',
+      description: 'A modern web application for managing token locking and claiming on the blockchain. Built with Next.js and thirdweb.',
+      tags: ['DeFi', 'Token Lock', 'Next.js'],
+      link: 'https://gitlab.com/saqib99/usdt_bep_20_locking',
+      image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800',
+      stats: [{ label: 'Protocol', value: 'BEP-20' }, { label: 'Frontend', value: 'Next.js' }]
     }
   ]
 };
