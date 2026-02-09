@@ -73,21 +73,67 @@ export const PROJECTS: Record<Domain, Project[]> = {
   ],
   [Domain.HUGGING_FACE]: [
     {
-      id: 'hf-1',
-      title: 'TinyLlama Fine-Tuning',
-      description: 'A community-standard instruction tuning of the TinyLlama model for medical FAQ.',
-      tags: ['Transformers', 'PEFT', 'Datasets'],
-      link: '#',
-      image: 'https://images.unsplash.com/photo-1620712943543-bcc4628c7185?auto=format&fit=crop&q=80&w=600',
-      stats: [{ label: 'Downloads', value: '10k+' }, { label: 'Likes', value: '250' }]
+      id: 'hf-effiswint',
+      title: 'EffiSwinT',
+      description: 'Efficient Deep Fake Detection using EfficientNet-Swin Transformer Hybrid Architecture. Combines EfficientNet-B3 and Swin Transformer for robust detection.',
+      tags: ['EfficientNet', 'Swin Transformer', 'Hybrid Architecture'],
+      link: 'https://huggingface.co/Saqib772/EffiSwinT',
+      image: 'https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&q=80&w=600',
+      stats: [{ label: 'Backbone', value: 'B3' }, { label: 'Type', value: 'Hybrid' }]
     },
     {
-      id: 'hf-2',
-      title: 'Multimodal Spaces Demo',
-      description: 'Interactive Gradio application showcasing stable diffusion for texture synthesis.',
-      tags: ['Gradio', 'Diffusers', 'Spaces'],
-      link: '#',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600'
+      id: 'hf-cnn-vit',
+      title: 'CNN_VIT_DeepFake',
+      description: 'Ensemble-Based Deep Learning Architecture for Deepfake Detection. System achieves 94.87% accuracy by leveraging three complementary architectures.',
+      tags: ['CNN', 'Vision Transformers', 'Ensemble'],
+      link: 'https://huggingface.co/Saqib772/CNN_VIT_DeepFake',
+      image: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=600',
+      stats: [{ label: 'Accuracy', value: '94.87%' }, { label: 'Models', value: 'Ensemble' }]
+    },
+    {
+      id: 'hf-fashion-dataset',
+      title: 'Fashion Dataset',
+      description: 'Comprehensive dataset hosted on Hugging Face for fashion image analysis, classification, and generative modeling research.',
+      tags: ['Dataset', 'Computer Vision', 'Fashion'],
+      link: 'https://huggingface.co/datasets/Saqib772/fashion',
+      image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=600',
+      stats: [{ label: 'Format', value: 'Parquet' }, { label: 'Task', value: 'Classification' }]
+    },
+    {
+      id: 'hf-space-exoplanet',
+      title: 'Exoplanet Detection Space',
+      description: 'Interactive application for detecting potential exoplanets from planetary data using advanced machine learning algorithms.',
+      tags: ['Space', 'Astronomy', 'Gradio'],
+      link: 'https://huggingface.co/spaces/Saqib772/Exoplanet_detection',
+      image: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&q=80&w=600',
+      stats: [{ label: 'Domain', value: 'Astro-ML' }, { label: 'UI', value: 'Gradio' }]
+    },
+    {
+      id: 'hf-space-astronomy',
+      title: 'Astronomy Image Classification',
+      description: 'Deep learning demo for classifying celestial objects and galactic phenomena with high precision.',
+      tags: ['Computer Vision', 'Astronomy', 'PyTorch'],
+      link: 'https://huggingface.co/spaces/Saqib772/Astronomy_image_classfication',
+      image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=600',
+      stats: [{ label: 'Modality', value: 'Vision' }, { label: 'Framework', value: 'HF Hub' }]
+    },
+    {
+      id: 'hf-space-crew',
+      title: 'CrewAgents',
+      description: 'Multi-agent system powered by CrewAI for automated technical blog generation and content orchestration.',
+      tags: ['Multi-Agent', 'LLMs', 'CrewAI'],
+      link: 'https://huggingface.co/spaces/Saqib772/Blogs_Agent',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600',
+      stats: [{ label: 'Agents', value: 'Autonomous' }, { label: 'Use-case', value: 'NLP' }]
+    },
+    {
+      id: 'hf-space-deepfake',
+      title: 'Deepfake Analysis Space',
+      description: 'Real-time interactive dashboard for testing facial images against state-of-the-art deepfake detection models.',
+      tags: ['Security', 'Deep Learning', 'Deepfake'],
+      link: 'https://huggingface.co/spaces/Saqib772/deepfake',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600',
+      stats: [{ label: 'Safety', value: 'Critical' }, { label: 'Model', value: 'EffiSwinT' }]
     }
   ],
   [Domain.DATA_SCIENCE]: [

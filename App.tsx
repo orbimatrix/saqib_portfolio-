@@ -47,7 +47,7 @@ const App: React.FC = () => {
     [Domain.HOME]: {
       title: "Architecting the Intelligence Layer",
       subtitle: "Bridging the gap between intelligent systems and decentralized protocols.",
-      description: "Saqib is a multi-disciplinary technical leader specializing in high-performance AI architectures, blockchain integration, and large-scale data systems. Explore my domains below to see deep-dives into specific technologies."
+      description: "AI Architect & Data Scientist with 3+ years of experience designing scalable Generative AI systems, LLM Agents, and RAG pipelines on enterprise cloud infrastructure. Proven expertise in MLOps, fine-tuning models and leading engineering teams to solve complex linguistic data challenges. Passionate about bridging the gap between advanced NLP research and production-grade software solutions."
     },
     [Domain.AI]: {
       title: "Artificial Intelligence",
