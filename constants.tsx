@@ -446,7 +446,7 @@ export const EXPERIENCES: Experience[] = [
   {
     role: 'CHIEF EXECUTIVE OFFICER',
     company: 'ORBIMATRIX',
-    period: '01/04/2024 – PRESENT',
+    period: '01/04/2024 – 01/01/2026',
     location: 'REMOTE, PAKISTAN',
     description: [
       'Architected Generative AI Platforms: Designed and launched a multi-tenant platform on Azure Kubernetes Service (AKS) and AWS EKS.',
