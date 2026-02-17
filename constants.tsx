@@ -78,11 +78,11 @@ export const THEMES: Record<Domain, DomainTheme> = {
   [Domain.SKILLS_PAGE]: {
     primary: 'from-violet-600 to-indigo-600',
     secondary: 'bg-violet-50',
-    accent: 'text-violet-600',
-    bg: 'bg-slate-950',
-    text: 'text-slate-100',
-    cardBg: 'bg-slate-900/80',
-    icon: 'text-violet-400'
+    accent: 'text-violet-700',
+    bg: 'bg-slate-50',
+    text: 'text-slate-900',
+    cardBg: 'bg-white',
+    icon: 'text-violet-600'
   }
 };
 

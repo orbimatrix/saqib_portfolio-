@@ -42,7 +42,7 @@ const App: React.FC = () => {
   }, [activeDomain, selectedTag]);
 
   // Group skills for Skills Page
-  const groupedSkills = useMemo(() => {
+  const groupedSkills = useMemo<Record<string, Skill[]>>(() => {
     if (activeDomain !== Domain.SKILLS_PAGE) return {};
     const skills = SKILLS[Domain.SKILLS_PAGE] || [];
     const groups: Record<string, Skill[]> = {};
@@ -97,8 +97,8 @@ const App: React.FC = () => {
 
   return (
     <div className={`min-h-screen transition-all duration-700 ${theme.bg} ${theme.text} relative`}>
-      {/* Box Grid Background for HOME Domain */}
-      {activeDomain === Domain.HOME && (
+      {/* Box Grid Background for HOME Domain and SKILLS Domain */}
+      {(activeDomain === Domain.HOME || activeDomain === Domain.SKILLS_PAGE) && (
         <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-20">
           <div
             className="absolute inset-0"
@@ -329,34 +329,34 @@ const App: React.FC = () => {
         {/* SKILLS PAGE CONTENT */}
         {activeDomain === Domain.SKILLS_PAGE && (
           <section id="skills-gamified" className="scroll-mt-32 max-w-7xl mx-auto space-y-20">
-             {Object.entries(groupedSkills).map(([category, skills]) => (
-                <div key={category} className="space-y-8">
-                  <h3 className={`text-3xl font-black uppercase tracking-wider ${theme.accent} border-b border-current border-opacity-20 pb-4`}>
-                    {category}
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {skills.map((skill, idx) => (
-                      <div key={idx} className={`${theme.cardBg} backdrop-blur-md p-6 rounded-2xl border border-white/5 hover:border-violet-500/50 transition-all group relative overflow-hidden`}>
-                        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <div className="relative z-10">
-                          <div className="flex justify-between items-center mb-4">
-                            <span className="font-bold text-lg text-slate-100">{skill.name}</span>
-                            <span className="font-mono text-xs text-violet-400 font-bold">LVL {skill.level}</span>
-                          </div>
-                          <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                            <div 
-                              className="h-full bg-gradient-to-r from-violet-600 to-indigo-500 relative"
-                              style={{ width: `${skill.level}%` }}
-                            >
-                               <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
-                            </div>
+            {Object.entries(groupedSkills).map(([category, skills]: [string, Skill[]]) => (
+              <div key={category} className="space-y-8">
+                <h3 className={`text-3xl font-black uppercase tracking-wider ${theme.accent} border-b border-current border-opacity-20 pb-4`}>
+                  {category}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {skills.map((skill, idx) => (
+                    <div key={idx} className={`${theme.cardBg} backdrop-blur-md p-6 rounded-2xl border border-slate-200 hover:border-violet-500/50 transition-all group relative overflow-hidden shadow-sm hover:shadow-md`}>
+                      <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="relative z-10">
+                        <div className="flex justify-between items-center mb-4">
+                          <span className="font-bold text-lg text-slate-800">{skill.name}</span>
+                          <span className="font-mono text-xs text-violet-600 font-bold">LVL {skill.level}</span>
+                        </div>
+                        <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-gradient-to-r from-violet-600 to-indigo-500 relative"
+                            style={{ width: `${skill.level}%` }}
+                          >
+                            <div className="absolute inset-0 bg-white/30 animate-pulse"></div>
                           </div>
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
-             ))}
+              </div>
+            ))}
           </section>
         )}
 
@@ -460,10 +460,10 @@ const App: React.FC = () => {
           </div>
 
           <div className="flex gap-8">
-             <button onClick={() => setActiveDomain(Domain.SKILLS_PAGE)} className="text-sm font-bold opacity-50 hover:opacity-100 transition-opacity">
-               Skills
-             </button>
-             <p className="text-sm font-mono opacity-30">© {new Date().getFullYear()} SAQIB.PRO</p>
+            <button onClick={() => setActiveDomain(Domain.SKILLS_PAGE)} className="text-sm font-bold opacity-50 hover:opacity-100 transition-opacity">
+              Skills
+            </button>
+            <p className="text-sm font-mono opacity-30">© {new Date().getFullYear()} SAQIB.PRO</p>
           </div>
         </div>
       </footer>
