@@ -7,7 +7,8 @@ export enum Domain {
   WEB3 = 'WEB3',
   VIDEO_EDITOR = 'VIDEO_EDITOR',
   ALL_PROJECTS = 'ALL_PROJECTS',
-  CONTACT = 'CONTACT'
+  CONTACT = 'CONTACT',
+  SKILLS_PAGE = 'SKILLS_PAGE'
 }
 
 export interface Project {
@@ -23,6 +24,7 @@ export interface Project {
 export interface Skill {
   name: string;
   level: number; // 0 to 100
+  category?: string;
 }
 
 export interface Experience {

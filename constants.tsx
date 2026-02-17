@@ -74,6 +74,15 @@ export const THEMES: Record<Domain, DomainTheme> = {
     text: 'text-slate-900',
     cardBg: 'bg-slate-50',
     icon: 'text-slate-600'
+  },
+  [Domain.SKILLS_PAGE]: {
+    primary: 'from-violet-600 to-indigo-600',
+    secondary: 'bg-violet-50',
+    accent: 'text-violet-600',
+    bg: 'bg-slate-950',
+    text: 'text-slate-100',
+    cardBg: 'bg-slate-900/80',
+    icon: 'text-violet-400'
   }
 };
 
@@ -327,7 +336,8 @@ export const PROJECTS: Record<Domain, Project[]> = {
     }
   ],
   [Domain.ALL_PROJECTS]: [], // Will be populated dynamically below
-  [Domain.CONTACT]: []
+  [Domain.CONTACT]: [],
+  [Domain.SKILLS_PAGE]: []
 };
 
 // Dynamic mapping from individual domain project lists for a comprehensive vault
@@ -370,7 +380,66 @@ export const SKILLS: Record<Domain, Skill[]> = {
     { name: 'Web3 & Blockchain', level: 95 },
     { name: 'Generative AI', level: 92 }
   ],
-  [Domain.CONTACT]: []
+  [Domain.CONTACT]: [],
+  [Domain.SKILLS_PAGE]: [
+    // Languages
+    { name: 'Python', level: 98, category: 'Languages' },
+    { name: 'Java', level: 90, category: 'Languages' },
+    { name: 'C++', level: 85, category: 'Languages' },
+    { name: 'C#', level: 85, category: 'Languages' },
+    { name: 'R', level: 80, category: 'Languages' },
+    { name: 'Golang', level: 85, category: 'Languages' },
+    { name: 'Rust', level: 80, category: 'Languages' },
+    { name: 'Solidity', level: 90, category: 'Languages' },
+    { name: 'SQL', level: 95, category: 'Languages' },
+    { name: 'NoSQL', level: 92, category: 'Languages' },
+    // AI/ML
+    { name: 'RAG Pipelines', level: 95, category: 'AI/ML' },
+    { name: 'Large Language Models', level: 95, category: 'AI/ML' },
+    { name: 'LangChain', level: 95, category: 'AI/ML' },
+    { name: 'TensorFlow', level: 90, category: 'AI/ML' },
+    { name: 'PyTorch', level: 92, category: 'AI/ML' },
+    { name: 'Scikit-learn', level: 90, category: 'AI/ML' },
+    { name: 'Crew AI', level: 95, category: 'AI/ML' },
+    { name: 'Keras', level: 88, category: 'AI/ML' },
+    { name: 'Hugging Face', level: 98, category: 'AI/ML' },
+    { name: 'Transformers', level: 95, category: 'AI/ML' },
+    { name: 'LlamaIndex', level: 92, category: 'AI/ML' },
+    { name: 'Agentic AI', level: 95, category: 'AI/ML' },
+    { name: 'Azure ML', level: 88, category: 'AI/ML' },
+    { name: 'MLflow', level: 85, category: 'AI/ML' },
+    { name: 'Computer Vision', level: 85, category: 'AI/ML' },
+    // Data & Analytics
+    { name: 'NumPy', level: 95, category: 'Data & Analytics' },
+    { name: 'Pandas', level: 98, category: 'Data & Analytics' },
+    { name: 'Power BI', level: 85, category: 'Data & Analytics' },
+    { name: 'Tableau', level: 80, category: 'Data & Analytics' },
+    { name: 'Matplotlib', level: 90, category: 'Data & Analytics' },
+    { name: 'Seaborn', level: 90, category: 'Data & Analytics' },
+    { name: 'PySpark', level: 85, category: 'Data & Analytics' },
+    { name: 'ETL Pipelines', level: 92, category: 'Data & Analytics' },
+    { name: 'Vector Databases', level: 90, category: 'Data & Analytics' },
+    { name: 'PostgreSQL', level: 90, category: 'Data & Analytics' },
+    // Web & Backend
+    { name: 'React', level: 95, category: 'Web & Backend' },
+    { name: 'Node.js', level: 92, category: 'Web & Backend' },
+    { name: 'Next.js', level: 95, category: 'Web & Backend' },
+    { name: 'Express', level: 90, category: 'Web & Backend' },
+    { name: 'Angular', level: 80, category: 'Web & Backend' },
+    { name: 'Vite', level: 90, category: 'Web & Backend' },
+    { name: 'Flask', level: 92, category: 'Web & Backend' },
+    { name: 'Django', level: 88, category: 'Web & Backend' },
+    { name: 'FastAPI', level: 95, category: 'Web & Backend' },
+    // DevOps & Cloud
+    { name: 'Azure', level: 90, category: 'DevOps & Cloud' },
+    { name: 'GCP', level: 88, category: 'DevOps & Cloud' },
+    { name: 'AWS', level: 85, category: 'DevOps & Cloud' },
+    { name: 'Docker', level: 92, category: 'DevOps & Cloud' },
+    { name: 'Kubernetes', level: 85, category: 'DevOps & Cloud' },
+    { name: 'Git', level: 95, category: 'DevOps & Cloud' },
+    { name: 'GitLab', level: 92, category: 'DevOps & Cloud' },
+    { name: 'CI/CD', level: 90, category: 'DevOps & Cloud' }
+  ]
 };
 
 export const EXPERIENCES: Experience[] = [

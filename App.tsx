@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Domain } from './types';
+import { Domain, Skill } from './types';
 import { THEMES, PROJECTS, SKILLS, EXPERIENCES } from './constants';
 import ProjectCard from './components/ProjectCard';
 import SectionHeader from './components/SectionHeader';
@@ -41,6 +41,19 @@ const App: React.FC = () => {
     );
   }, [activeDomain, selectedTag]);
 
+  // Group skills for Skills Page
+  const groupedSkills = useMemo(() => {
+    if (activeDomain !== Domain.SKILLS_PAGE) return {};
+    const skills = SKILLS[Domain.SKILLS_PAGE] || [];
+    const groups: Record<string, Skill[]> = {};
+    skills.forEach(skill => {
+      const category = skill.category || 'Other';
+      if (!groups[category]) groups[category] = [];
+      groups[category].push(skill);
+    });
+    return groups;
+  }, [activeDomain]);
+
   const domainMeta = {
     [Domain.HOME]: {
       title: "Architecting the Intelligence Layer",
@@ -73,6 +86,10 @@ const App: React.FC = () => {
     [Domain.CONTACT]: {
       title: "Get in Touch",
       description: "Let's discuss how we can build the future together. Whether it's a project inquiry or a technical consultation, I'm here to help."
+    },
+    [Domain.SKILLS_PAGE]: {
+      title: "Technical Arsenal",
+      description: "Level 99 Engineering. A breakdown of my combat-ready tech stack and proficiencies."
     }
   };
 
@@ -175,12 +192,14 @@ const App: React.FC = () => {
               </>
             ) : (
               <>
-                <a
-                  href="#projects"
-                  className={`px-10 py-5 rounded-2xl bg-gradient-to-r ${theme.primary} text-white font-black text-lg shadow-xl hover:scale-105 transition-transform flex items-center justify-center`}
-                >
-                  Contact Me
-                </a>
+                {activeDomain !== Domain.SKILLS_PAGE && (
+                  <a
+                    href="#projects"
+                    className={`px-10 py-5 rounded-2xl bg-gradient-to-r ${theme.primary} text-white font-black text-lg shadow-xl hover:scale-105 transition-transform flex items-center justify-center`}
+                  >
+                    Contact Me
+                  </a>
+                )}
 
               </>
             )}
@@ -267,7 +286,7 @@ const App: React.FC = () => {
         )}
 
         {/* DOMAIN PAGES & ALL PROJECTS GALLERY */}
-        {activeDomain !== Domain.HOME && activeDomain !== Domain.CONTACT && (
+        {activeDomain !== Domain.HOME && activeDomain !== Domain.CONTACT && activeDomain !== Domain.SKILLS_PAGE && (
           <>
             {/* Tag Filters - Hidden for Domain.ALL_PROJECTS and Domain.VIDEO_EDITOR to avoid clutter */}
             {availableTags.length > 0 && activeDomain !== Domain.ALL_PROJECTS && activeDomain !== Domain.VIDEO_EDITOR && (
@@ -303,6 +322,42 @@ const App: React.FC = () => {
               </div>
             </section>
           </>
+        )}
+
+
+
+        {/* SKILLS PAGE CONTENT */}
+        {activeDomain === Domain.SKILLS_PAGE && (
+          <section id="skills-gamified" className="scroll-mt-32 max-w-7xl mx-auto space-y-20">
+             {Object.entries(groupedSkills).map(([category, skills]) => (
+                <div key={category} className="space-y-8">
+                  <h3 className={`text-3xl font-black uppercase tracking-wider ${theme.accent} border-b border-current border-opacity-20 pb-4`}>
+                    {category}
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {skills.map((skill, idx) => (
+                      <div key={idx} className={`${theme.cardBg} backdrop-blur-md p-6 rounded-2xl border border-white/5 hover:border-violet-500/50 transition-all group relative overflow-hidden`}>
+                        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div className="relative z-10">
+                          <div className="flex justify-between items-center mb-4">
+                            <span className="font-bold text-lg text-slate-100">{skill.name}</span>
+                            <span className="font-mono text-xs text-violet-400 font-bold">LVL {skill.level}</span>
+                          </div>
+                          <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                            <div 
+                              className="h-full bg-gradient-to-r from-violet-600 to-indigo-500 relative"
+                              style={{ width: `${skill.level}%` }}
+                            >
+                               <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+             ))}
+          </section>
         )}
 
         {/* CONTACT PAGE CONTENT */}
@@ -404,7 +459,12 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <p className="text-sm font-mono opacity-30">© {new Date().getFullYear()} SAQIB.PRO</p>
+          <div className="flex gap-8">
+             <button onClick={() => setActiveDomain(Domain.SKILLS_PAGE)} className="text-sm font-bold opacity-50 hover:opacity-100 transition-opacity">
+               Skills
+             </button>
+             <p className="text-sm font-mono opacity-30">© {new Date().getFullYear()} SAQIB.PRO</p>
+          </div>
         </div>
       </footer>
     </div>
