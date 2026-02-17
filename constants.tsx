@@ -315,15 +315,6 @@ export const PROJECTS: Record<Domain, Project[]> = {
       link: 'https://www.youtube.com/@TowardsBetterUnderstanding',
       image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800',
       stats: [{ label: 'Genre', value: 'Knowledge' }, { label: 'Impact', value: 'Educational' }]
-    },
-    {
-      id: 'video-yt-orbimatrix',
-      title: 'YouTube: OrbiMatrix Channel',
-      description: 'Primary creative outlet for tech-focused video production, editing and storytelling.',
-      tags: ['YouTube', 'Production', 'Tech'],
-      link: 'https://www.youtube.com/@orbimatrix',
-      image: 'https://images.unsplash.com/photo-1536240478700-b86d24627a7b?auto=format&fit=crop&q=80&w=800',
-      stats: [{ label: 'Platform', value: 'YouTube' }, { label: 'Role', value: 'Lead Editor' }]
     }
   ],
   [Domain.ALL_PROJECTS]: [] // Will be populated dynamically below
