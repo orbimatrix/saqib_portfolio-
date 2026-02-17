@@ -6,7 +6,8 @@ export enum Domain {
   DATA_SCIENCE = 'DATA_SCIENCE',
   WEB3 = 'WEB3',
   VIDEO_EDITOR = 'VIDEO_EDITOR',
-  ALL_PROJECTS = 'ALL_PROJECTS'
+  ALL_PROJECTS = 'ALL_PROJECTS',
+  CONTACT = 'CONTACT'
 }
 
 export interface Project {

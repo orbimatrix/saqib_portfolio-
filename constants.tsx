@@ -65,6 +65,15 @@ export const THEMES: Record<Domain, DomainTheme> = {
     text: 'text-slate-100',
     cardBg: 'bg-slate-900/80',
     icon: 'text-slate-400'
+  },
+  [Domain.CONTACT]: {
+    primary: 'from-slate-600 to-slate-800',
+    secondary: 'bg-slate-50',
+    accent: 'text-slate-700',
+    bg: 'bg-white',
+    text: 'text-slate-900',
+    cardBg: 'bg-slate-50',
+    icon: 'text-slate-600'
   }
 };
 
@@ -317,7 +326,8 @@ export const PROJECTS: Record<Domain, Project[]> = {
       stats: [{ label: 'Genre', value: 'Knowledge' }, { label: 'Impact', value: 'Educational' }]
     }
   ],
-  [Domain.ALL_PROJECTS]: [] // Will be populated dynamically below
+  [Domain.ALL_PROJECTS]: [], // Will be populated dynamically below
+  [Domain.CONTACT]: []
 };
 
 // Dynamic mapping from individual domain project lists for a comprehensive vault
@@ -359,7 +369,8 @@ export const SKILLS: Record<Domain, Skill[]> = {
     { name: 'Multi-stack Engineering', level: 98 },
     { name: 'Web3 & Blockchain', level: 95 },
     { name: 'Generative AI', level: 92 }
-  ]
+  ],
+  [Domain.CONTACT]: []
 };
 
 export const EXPERIENCES: Experience[] = [
